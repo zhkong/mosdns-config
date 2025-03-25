@@ -92,11 +92,11 @@ plugins:
       concurrent: 1 # 并发数。每次请求随机选取 concurrent 个 upstreams 发送请求。
                     # 取最快返回的应答。超过 3 最多选 3 个。默认 1。
       upstreams:
-        - addr: "https://162.159.36.1/dns-query"
+        - addr: 192.168.1.101
           enable_http3: false
           # socks5: "127.0.0.1:1080" # 目前暂不支持用户名密码认证，只支持基于 TCP 的协议
-        - addr: "https://162.159.46.1/dns-query"
-          enable_http3: false
+        # - addr: "https://162.159.46.1/dns-query"
+        #   enable_http3: false
         # - addr: "https://doh.opendns.com/dns-query"
         #   dial_addr: "146.112.41.2"
         #   enable_http3: false
